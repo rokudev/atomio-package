@@ -1,0 +1,218 @@
+{
+    ".source.brightscript": {
+        "abs": {
+            "prefix": "abs",
+            "body": "Abs(${1:x as Float})${2:' as Float}"
+        },
+        "atn": {
+            "prefix": "atn",
+            "body": "Atn(${1:x as Float})${2:' as Float}"
+        },
+        "cdbl": {
+            "prefix": "cdbl",
+            "body": "Cdbl(${1:x as Integer})${2:' as Float}"
+        },
+        "cint": {
+            "prefix": "cint",
+            "body": "Cint(${1:x as Float})${2:' as Integer}"
+        },
+        "cos": {
+            "prefix": "cos",
+            "body": "Cos(${1:x as Float})${2:' as Float}"
+        },
+        "csng": {
+            "prefix": "csng",
+            "body": "Csng(${1:x as Integer})${2:' as Float}"
+        },
+        "exp": {
+            "prefix": "exp",
+            "body": "Exp(${1:x as Float})${2:' as Float}"
+        },
+        "fix": {
+            "prefix": "fix",
+            "body": "Fix(${1:x as Float})${2:' as Integer}"
+        },
+        "int": {
+            "prefix": "int",
+            "body": "Int(${1:x as Float})${2:' as Integer}"
+        },
+        "log": {
+            "prefix": "log",
+            "body": "Log(${1:x as Float})${2:' as Float}"
+        },
+        "rnd": {
+            "prefix": "rnd",
+            "body": "Rnd(${1:range as Integer})${2:' as Integer}"
+        },
+        "rnd": {
+            "prefix": "rnd",
+            "body": "Rnd(${1:0})${2:' as Float}"
+        },
+        "sgn": {
+            "prefix": "sgn",
+            "body": "Sgn(${1:x as Float})${2:' as Integer}"
+        },
+        "sgn": {
+            "prefix": "sgn",
+            "body": "Sgn(${1:x as Integer})${2:' as Integer}"
+        },
+        "sin": {
+            "prefix": "sin",
+            "body": "Sin(${1:x as Float})${2:' as Float}"
+        },
+        "sqr": {
+            "prefix": "sqr",
+            "body": "Sqr(${1:x as Float})${2:' as Float}"
+        },
+        "tan": {
+            "prefix": "tan",
+            "body": "Tan(${1:x as Float})${2:' as Float}"
+        },
+        "ucase": {
+            "prefix": "ucase",
+            "body": "UCase(${1:s as String})${2:' as String}"
+        },
+        "lcase": {
+            "prefix": "lcase",
+            "body": "LCase(${1:s as String})${2:' as String}"
+        },
+
+        "asc": {
+            "prefix": "asc",
+            "body": "Asc(${1:letter as String})${2:' as Integer}"
+        },
+        "chr": {
+            "prefix": "chr",
+            "body": "Chr(${1:ch as Integer})${2:' as String}"
+        },
+        "instr": {
+            "prefix": "instr",
+            "body": "Instr(${1:start as Integer}, ${2:text as String}, ${3:substring as String})${4:' as Integer}"
+        },
+        "left": {
+            "prefix": "left",
+            "body": "Left(${1:s as String}, ${2:n as Integer})${3:' as String}"
+        },
+        "len": {
+            "prefix": "len",
+            "body": "Len(${1:s as String})${2:' as Integer}"
+        },
+        "mid": {
+            "prefix": "mid",
+            "body": "Mid(${1:s as String}, ${2:p as Integer}, ${3:[n as Integer]})${4:' as String}"
+        },
+        "right": {
+            "prefix": "right",
+            "body": "Right(${1:s as String}, ${2:n as Integer})${3:' as String}"
+        },
+        "str": {
+            "prefix": "str",
+            "body": "Str(${1:value as Float})${2:' as String}"
+        },
+        "stri": {
+            "prefix": "stri",
+            "body": "StrI(${1:value as Integer}, ${2:radix as Integer})${3:' as String}"
+        },
+        "string": {
+            "prefix": "string",
+            "body": "String(${1:n as Integer}, ${2:str as String })${3:' as String}"
+        },
+        "stringi": {
+            "prefix": "stringi",
+            "body": "StringI(${1:n as Integer}, ${2:ch as Integer})${3:' as String}"
+        },
+        "val": {
+            "prefix": "val",
+            "body": "Val(${1:s as String})${2:' as Float}"
+        },
+        "substitute": {
+            "prefix": "substitute",
+            "body": "Substitute(${1:str as String}, ${2:arg0 as String}, ${3:arg1 = \"\" as String}, ${4:arg2 = \"\" as String}, ${5:arg3 = \"\" as String})${6:' as String}"
+        },
+        "sleep": {
+            "prefix": "sleep",
+            "body": "Sleep(${1:milliseconds as Integer})${2:' as Void}"
+        },
+        "wait": {
+            "prefix": "wait",
+            "body": "Wait(${1:timeout as Integer}, ${2:port as Object})${3:' as Object}"
+        },
+
+        "getinterface": {
+            "prefix": "getinterface",
+            "body": "GetInterface(${1:object as Object}, ${2:ifname as String})${3:' as Interface}"
+        },
+        "FindMemberFunction": {
+            "prefix": "FindMemberFunction",
+            "body": "FindMemberFunction(${1:object as Object}, ${2:funName as String})${3:' As Interface}"
+        },
+        "uptime": {
+            "prefix": "uptime",
+            "body": "UpTime(${1:dummy as Integer})${2:' as Float}"
+        },
+        "rebootsystem": {
+            "prefix": "rebootsystem",
+            "body": "RebootSystem()${1:' as Void}"
+        },
+        "listdir": {
+            "prefix": "listdir",
+            "body": "ListDir(${1:path as String})${2:' as Object}"
+        },
+        "readasciifile": {
+            "prefix": "readasciifile",
+            "body": "ReadAsciiFile(${1:filepath as String})${2:' as String}"
+        },
+        "writeasciifile": {
+            "prefix": "writeasciifile",
+            "body": "WriteAsciiFile(${1:filepath as String}, ${2:text as String})${3:' as Boolean}"
+        },
+        "copyfile": {
+            "prefix": "copyfile",
+            "body": "CopyFile(${1:source as String}, ${2:destination as String})${3:' as Boolean}"
+        },
+        "movefile": {
+            "prefix": "movefile",
+            "body": "MoveFile(${1:source as String}, ${2:destination as String})${3:' as Boolean}"
+        },
+        "matchfiles": {
+            "prefix": "matchfiles",
+            "body": "MatchFiles(${1:path as String}, ${2:pattern_in as String})${3:' as Object}"
+        },
+        "deletefile": {
+            "prefix": "deletefile",
+            "body": "DeleteFile(${1:file as String})${2:' as Boolean}"
+        },
+        "deletedirectory": {
+            "prefix": "deletedirectory",
+            "body": "DeleteDirectory(${1:dir as String})${2:' as Boolean}"
+        },
+        "createdirectory": {
+            "prefix": "createdirectory",
+            "body": "CreateDirectory(${1:dir as String})${2:' as Boolean}"
+        },
+        "formatdrive": {
+            "prefix": "formatdrive",
+            "body": "FormatDrive(${1:drive as String} , ${2:fs_type as String})${3:' as Boolean}"
+        },
+        "strtoi": {
+            "prefix": "strtoi",
+            "body": "StrToI(${1:str as String})${2:' as Dynamic}"
+        },
+        "rungarbagecollector": {
+            "prefix": "rungarbagecollector",
+            "body": "RunGarbageCollector()${1:' as Object}"
+        },
+        "parsejson": {
+            "prefix": "parsejson",
+            "body": "ParseJson(${1:jsonString as String})${2:' as Object}"
+        },
+        "formatjson": {
+            "prefix": "formatjson",
+            "body": "FormatJson(${1:json as Object, flags = 0 as Integer})${2:' as String}"
+        },
+        "tr": {
+            "prefix": "tr",
+            "body": "Tr(${1:source as String})${2:' as String}"
+        }
+    }
+}

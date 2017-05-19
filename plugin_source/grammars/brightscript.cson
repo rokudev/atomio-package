@@ -1,0 +1,79 @@
+name: "BrightScript"
+comment: "BRS Language"
+fileTypes: [
+    "brs"
+    "bs"
+]
+scopeName: "source.brightscript"
+foldingStartMarker: "(?i:\\b(for|for each|function|if|sub|while)\\b)"
+foldingStopMarker: "(?i:\\b(end|end for|end function|end if|end sub|end while|next)\\b)"
+patterns: [
+    {
+        include: "#comment"
+    }
+    {
+        include: "#sdk1_components"
+    }
+    {
+        include: "#string"
+    }
+    {
+        include: "#operators"
+    }
+    {
+        include: "#program_statements"
+    }
+    {
+        include: "#sdk2_attributes"
+    }
+    {
+        include: "#class"
+    }
+    {
+        include: "#constants"
+    }
+    {
+        include: "#methods"
+    }
+    {
+        include: "#brackets"
+    }
+    {
+        include: "#comment2"
+    }
+]
+repository:
+    comment:
+        name:"comment.line.rem.brightscript"
+        match:"^\s*?(?i:rem\s).*$\n?"
+    sdk1_components:
+        name:"support.class.brightscript"
+        match:"(?i:\\b(ifAppInfo|ifAppManager|ifArray|ifArrayGet|ifArraySet|ifArraySort|ifAssociativeArray|ifAudioMetadata|ifAudioPlayer|ifAudioResource|ifBoolean|ifByteArray|ifCaptionRenderer|ifChannelStore|ifCodeRegistrationScreen|ifCompositor|ifDateTime|ifDeviceInfo|ifDouble|ifDraw2D|ifEVPCipher|ifEVPDigest|ifEnum|ifFileSystem|ifFloat|ifFont|ifFontMetrics|ifFontRegistry|ifFunction|ifGetMessagePort|ifGridScreen|ifHMAC|ifHdmiStatus|ifHttpAgent|ifImageCanvas|ifImageMetadata|ifInput|ifInt|ifIntOps|ifKeyboardScreen|ifList|ifListScreen|ifLocalization|ifLongInt|ifMessageDialog|ifMessagePort|ifOneLineDialog|ifParagraphScreen|ifPath|ifPinEntryDialog|ifPosterScreen|ifProgramGuide|ifRSA|ifRegex|ifRegion|ifRegistry|ifRegistrySection|ifRoSGScreen|ifSGNodeBoundingRect|ifSGNodeChildren|ifSGNodeDict|ifSGNodeField|ifSGNodeFocus|ifSGNodeHttpAgentAccess|ifScreen|ifSearchHistory|ifSearchScreen|ifSetMessagePort|ifSlideShow|ifSocket|ifSocketAddress|ifSocketAsync|ifSocketCastOption|ifSocketConnection|ifSocketConnectionOption|ifSocketConnectionStatus|ifSocketOption|ifSocketStatus|ifSourceIdentity|ifSpringboardScreen|ifSprite|ifString|ifStringOps|ifSystemLog|ifTextScreen|ifTextToSpeech|ifTextureManager|ifTextureRequest|ifTimespan|ifToStr|ifTuner|ifUrlTransfer|ifVideoPlayer|ifVideoScreen|ifXMLElement|ifXMLList|roAppInfo|roAppManager|roArray|roAssociativeArray|roAudioMetadata|roAudioPlayer|roAudioPlayerEvent|roAudioResource|roBitmap|roBoolean|roByteArray|roCaptionRenderer|roCaptionRendererEvent|roChannelStore|roChannelStoreEvent|roCodeRegistrationScreen|roCodeRegistrationScreenEvent|roCompositor|roDataGramSocket|roDateTime|roDeviceInfo|roDeviceInfoEvent|roDouble|roEVPCipher|roEVPDigest|roFileSystem|roFileSystemEvent|roFloat|roFont|roFontMetrics (deprecated)|roFontRegistry|roFunction|roGridScreen|roGridScreenEvent|roHMAC|roHdmiHotPlugEvent|roHdmiStatus|roHdmiStatusEvent|roHttpAgent|roImageCanvas|roImageCanvasEvent|roImageMetadata|roInput|roInputEvent|roInt|roInvalid|roKeyboardScreen|roKeyboardScreenEvent|roList|roListScreen|roListScreenEvent|roLocalization|roLongInteger|roMessageDialog|roMessageDialogEvent|roMessagePort|roOneLineDialog|roOneLineDialogEvent|roParagraphScreen|roParagraphScreenEvent|roPath|roPinEntryDialog|roPinEntryDialogEvent|roPosterScreen|roPosterScreenEvent|roProgramGuide|roRSA|roRegex|roRegion|roRegistry|roRegistrySection|roSGNode|roSGNodeEvent|roSGScreen|roSGScreenEvent|roScreen|roSearchHistory|roSearchScreen|roSearchScreenEvent|roSlideShow|roSlideShowEvent|roSocketAddress|roSocketEvent|roSpringboardScreen|roSpringboardScreenEvent|roSprite|roStreamSocket|roString|roSystemLog|roSystemLogEvent|roTextScreen|roTextScreenEvent|roTextToSpeech|roTextToSpeechEvent|roTextureManager|roTextureRequest|roTextureRequestEvent|roTimespan|roTuner|roTunerEvent|roUniversalControlEvent|roUrlEvent|roUrlTransfer|roVideoPlayer|roVideoPlayerEvent|roVideoScreen|roVideoScreenEvent|roXMLElement|roXMLList)\\b)"
+    string:
+        name:"string.quoted.double.brightscript"
+        match:"\"(?:[^\"\\\\]+|\\\\.)*\""
+    operators:
+        name:"keyword.operator.brightscript"
+        match:"=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\\+|-|\\*|\\/|\\^|&amp;|\\\\b(?i:(And|Not|Or))\\\\b"
+    program_statements:
+        name:"keyword.control.brightscript"
+        match:"(?i:\\b(as|each|else|end|end for|end function|end if|end sub|end while|for|for each|function|if|in|next|return|step|stop|sub|then|to|while)\\b)"
+    sdk2_attributes:
+        name:"support.function.component.brightscript"
+        match:"(?i:\\b\.(MaxVideoDecodeResolution|active|addItemSpacingAfterChild|animateToItem|audioFormat|audioTrack|availableAudioTracks|availableSubtitleTracks|backExitsScene|backgroundColor|backgroundURI|backgroundUri|basePosterSize|bifDisplay|bitmapHeight|bitmapWidth|blendColor|bufferingBar|bufferingStatus|bufferingTextColor|bulletText|bulletTextColor|bulletTextFont|busySpinner|buttonFocused|buttonGroup|buttonHeight|buttonSelected|buttons|caption1Color|caption1Font|caption1NumLines|caption2Color|caption2Font|caption2NumLines|captionBackgroundBitmapUri|captionHorizAlignment|captionLineSpacing|captionVertAlignment|catalog|cgms|change|checkOnSelect|checkedIconUri|checkedItem|checkedState|childRenderOrder|clippingRect|clockColor|clockText|clockwise|close|color|columnSpacings|columnWidths|command|completedStreamInfo|content|contentIndex|contentIsPlaylist|control|createNextPanelIndex|createNextPanelOnItemFocus|cursorPosition|delay|deltaOrder|dialog|displayPartialLines|dividerUri|drawFocusFeedback|drawFocusFeedbackOnTop|duration|easeFunction|easeInPercent|easeOutPercent|ellipsisText|ellipsizeOnBoundary|enableCaptionScrolling|enableScreenSaverWhilePlaying|enableTrickPlay|enableUI|errorCode|errorMessage|errorMsg|failedBitmapOpacity|failedBitmapUri|fakeServer|fieldToInterp|fire|fixedLayout|focusBitmapBlendColor|focusBitmapUri|focusButton|focusColumn|focusFootprintBitmapUri|focusFootprintBlendColor|focusRow|focusable|focusedCheckedIconUri|focusedChild|focusedColor|focusedFont|focusedIconUri|focusedKeyColor|focusedTextColor|focusedTextFont|focusedUncheckedIconUri|font|fraction|functionName|globalCaptionMode|goBackCount|graphicUri|grid|hasNextPanel|height|hintText|hintTextColor|horizAlign|horizAlignment|horizFocusAnimationStyle|iconUri|id|imageWellBitmapUri|inheritParentOpacity|inheritParentTransform|isFullScreen|isGoingBack|isOffscreenLeft|isTextEllipsized|itemClippingRect|itemComponentName|itemFocused|itemSelected|itemSize|itemSpacing|itemSpacings|itemUnfocused|jumpToItem|key|keyColor|keyValue|keyboard|keyboardBitmapUri|layoutDirection|leftDividerUri|leftDividerVertOffset|leftLabel|leftOnly|leftOrientation|leftPosition|lineSpacing|list|loadDisplayMode|loadHeight|loadStatus|loadSync|loadWidth|loadingBitmapOpacity|loadingBitmapUri|logoBaselineOffset|logoUri|loop|lowerCase|maskBitmapHeight|maskBitmapWidth|maskOffset|maskSize|maskUri|maxLines|maxTextLength|maxWidth|message|messageColor|messageFont|minWidth|mute|nextContentIndex|nextPanel|notificationInterval|numColumns|numLines|numPanels|numRenderPasses|numRows|opacity|optionsAvailable|optionsColor|optionsDialog|optionsDimColor|optionsIconColor|optionsIconDimColor|order|orderStatus|overhang|overhangTitle|panelSet|panelSize|pauseBufferEnd|pauseBufferOverflow|pauseBufferStart|pin|pinDisplayBitmapUri|pinDisplayTextColor|pinLength|pinPad|position|poster|posterDisplayMode|privacyHintColor|purchases|renderPass|repeat|repeatCount|requestedUserData|retrievingBar|retrievingTextColor|rightDividerUri|rightDividerVertOffset|rightJustify|rightLabel|rotation|rowHeights|rowSpacings|scale|scaleRotateCenter|scrollSpeed|scrollbarThumbBitmapUri|scrollbarTrackBitmapUri|sectionDividerBitmapUri|sectionDividerFont|sectionDividerHeight|sectionDividerLeftOffset|sectionDividerMinWidth|sectionDividerSpacing|sectionDividerTextColor|sectionDividerWidth|secureMode|seek|selectButtonMovesPanelForward|showBackgroundForEmptyCaptions|showClock|showFocusFootprint|showOptions|showPinDisplay|showSectionLabels|showTextEditBox|size|slideDuration|spinInterval|state|storeCatalog|streamInfo|streamingSegment|subtitleTrack|text|textColor|textEditBox|textFont|textHorizAlign|timeToStartStreaming|timedMetaData|timedMetaDataSelectionKeys|title|titleColor|translation|trickPlayBar|truncateOnDelimiter|uncheckedIconUri|uri|useAtlas|userData|vertAlign|vertAlignment|vertFocusAnimationStyle|videoFormat|visible|wasClosed|width|wordBreakChars|wrap|wrapDividerBitmapUri|wrapDividerHeight|wrapDividerWidth)\\b)"
+    class:
+        name:"entity.name.brightscript"
+        match:"(?i:\\b(top|m(.))\\b)"
+    constants:
+        name:"constant.numeric.brightscript"
+        match:"(?i:\\b([0-9]+|false|invalid|true)\\b)"
+    methods:
+        name:"storage.type.brightscript"
+        match:"(?=\\.).[^\\(\\,|\\.|\n|\\s|\\)]*(?=\\()"
+    brackets:
+        name:"variable.language.brightscript"
+        match:"({|}|:|\\[|\\])"
+    comment2:
+        name:"comment.line.apostrophe.brightscript"
+        match:"(').*$\n?"
+

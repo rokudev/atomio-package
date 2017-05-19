@@ -1,0 +1,59 @@
+{
+    ".source.brightscript": {
+        "function": {
+            "description" : "Create Function",
+            "prefix": "fun_create",
+            "body": "Function ${1:functionName}(${2:params}) as ${3:ReturnType}\n\t${4:' code here}\nEnd Function$0"
+        },
+        "sub": {
+            "description" : "Create Sub",
+            "prefix": "sub_create",
+            "body": "Sub ${1:subName}(${2:params})\n\t${3:' code here}\nEnd Sub$0"
+        },
+        "for_to": {
+            "description" : "For loop",
+            "prefix": "for_to",
+            "body": "For ${1:i=0} to ${2:10} step ${3:1}\n\t${4:' code here}\nEnd For$0"
+        },
+        "for_each": {
+            "description" : "For each loop",
+            "prefix": "for_each",
+            "body": "For each ${1:item} in ${2:items}\n\t${3:' code here}\nEnd For$0"
+        },
+        "while": {
+            "description" : "While loop",
+            "prefix": "whi_le",
+            "body": "While ${1:boolean}\n\t${2:' code here}\nEnd While$0"
+        },
+        "if_then": {
+            "description" : "If then statement (one line)",
+            "prefix": "if_then",
+            "body": "If ${1:boolean} Then ${2:statement}$0"
+        },
+        "if_then_else": {
+            "description" : "If else statement (one line)",
+            "prefix": "if_then_else",
+            "body": "If ${1:boolean} Then ${2:i++} Else ${3:i+=2}$0"
+        },
+        "if_end": {
+            "description" : "If statement",
+            "prefix": "if_end",
+            "body": "If ${1:boolean}\n\t${2:' code here}\nEnd If$0"
+        },
+        "if_else": {
+            "description" : "If-else statement",
+            "prefix": "if_else",
+            "body": "If ${1:boolean}\n\t${2:' code here}\nelse\n\t${3:' code here}\nEnd If$0"
+        },
+        "if_else_if": {
+            "description" : "If-else-if statement",
+            "prefix": "if_else_if",
+            "body": "If ${1:boolean}\n\t${2:' code here}\nElse If ${3:boolean}\n\t${4:' code here}\nEnd If$0"
+        },
+        "if_else_if_else": {
+            "description" : "Ifelse-Ifelse statement",
+            "prefix": "if_else_if_else",
+            "body": "If ${1:boolean}\n\t${2:' code here}\nElse If ${3:boolean}\n\t${4:' code here}\nElse\n\t${5:' code here}\nEnd If$0"
+        }
+    }
+}

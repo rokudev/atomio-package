@@ -1,0 +1,6 @@
+".source.brightscript":
+  editor:
+    completions: []
+    commentStart: "' "
+    increaseIndentPattern: "(?i)^\\s*(sub|if|f(or( each)?|unction)|while)\\s*([a-zA-Z_]\\w*)\\s*(\\(.*\\)\\s*)?$"
+    decreaseIndentPattern: "(?i)^\\s*(next|e(nd(if| (sub|if|function))|xit( while)?))\\s*$"

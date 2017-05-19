@@ -1,0 +1,25 @@
+{
+    "_id": "atom_roku@0.0.1",
+    "_inCache": true,
+    "_installable": true,
+    "_location": "/atom_roku",
+    "_phantomChildren": {},
+    "activationCommands": {
+        "atom-workspace": "atom_roku:rokuDeploy"
+    },
+    "dependencies": {
+        "archiver": "^1.3.0",
+        "request": "^2.79.0",
+        "recursive-readdir": "^2.0.0"
+    },
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "description": "Roku Package for an AtomIO (BrightScript, RSG, Deploy).",
+    "license": "MIT",
+    "main": "./lib/atom_roku",
+    "name": "atom_roku",
+    "readme": "# Roku Atom Package\n",
+    "readmeFilename": "README.md",
+    "version": "0.0.1"
+}

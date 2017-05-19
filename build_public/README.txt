@@ -1,0 +1,1 @@
+package should be deployed to github and accessible from atom package site.
