@@ -104,7 +104,7 @@ module.exports = rokuDeploy = {
 
     makeZip: function() {
         if (!this.projectPath){
-            atom.notifications.addError("Some error with project path!\nTry to open other file and run deploy.");
+            atom.notifications.addError("Some error with project path!\nTry to open other file and run deploy.\nMake sure you are focused at opened file in text editor.");
             return;
         }
 
@@ -191,16 +191,16 @@ module.exports = rokuDeploy = {
     },
 
     deployCallback: function(error, response, body) {
-        if (response !== null && response.statusCode !== null && response.statusCode === 200) {
+        if (response !== void 0 && response != null && response.statusCode !== null && response.statusCode === 200) {
             if (response.body.indexOf("Identical to previous version -- not replacing.") !== -1) {
                 atom.notifications.addWarning(response.body);
             } else {
                 atom.notifications.addSuccess('Deployed to ' + module.exports.rokuIpAddress);
             }
         } else {
-            atom.notifications.addFatalError("Failed to deploy to " + module.exports.rokuIpAddress);
-            if (response !== null) {
-                atom.notifications.addFatalError(response.body);
+            atom.notifications.addError("Failed to deploy to " + module.exports.rokuIpAddress + ". \nCheck IP address, username and dev password in settings.");
+            if(error !== null){
+                atom.notifications.addError("Error: " + error);
             }
         }
     },
