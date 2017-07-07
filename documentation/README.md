@@ -4,7 +4,7 @@ CORE:
 ---
 1. Installation
 To install Atom go to https://atom.io/ and follow instructions.
-2. Go to ~/atom/packages/ or C:\Users\user.name\.atom\packages
+2. Go to ~/.atom/packages/ or C:\Users\user.name\.atom\packages
 3. Create folder "atom_roku"
 4. Copy all from plugin_source folder to atom_roku folder
 5. Open terminal
