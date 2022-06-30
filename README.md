@@ -1,4 +1,4 @@
-# atomio-package
+# atomio-package ⚠️ decommissioned ⚠️
 The package for Atom IO Text Editor
 
  - [Instructions](../master/documentation/README.md)
